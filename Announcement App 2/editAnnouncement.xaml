@@ -1,0 +1,42 @@
+﻿<Window x:Class="Announcement_App_2.editAnnouncement"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Announcement_App_2"
+        mc:Ignorable="d"
+        Title="editAnnouncement" Height="400.764" Width="615.286" AllowsTransparency="True" WindowStyle="None" ResizeMode="NoResize" OpacityMask="White" Foreground="White">
+    <Window.Background>
+        <ImageBrush/>
+    </Window.Background>
+    <Grid Margin="0,0,10,-9">
+        <Rectangle x:Name="rectMain" Fill="#FF2E6CA4" Stroke="Black" RadiusX="10" RadiusY="10" Margin="10,10,0,10" HorizontalAlignment="Left" Width="594" Loaded="rectMain_Loaded"/>
+        <Rectangle x:Name="rectExit" HorizontalAlignment="Left" Height="42" Margin="562,11,0,0" RadiusY="10" RadiusX="10" Stroke="Black" VerticalAlignment="Top" Width="42" StrokeThickness="0" MouseLeave="rectExit_MouseLeave" MouseLeftButtonDown="rectExit_MouseLeftButtonDown" MouseEnter="rectExit_MouseEnter">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/exitIcon.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Label x:Name="lblTitle" Content="Edit Announcement" HorizontalAlignment="Left" Margin="24,21,0,0" VerticalAlignment="Top" FontFamily="Open Sans" FontSize="28" FontWeight="Bold" Foreground="White"/>
+        <Rectangle x:Name="rectDragBar" Fill="#FF2286E0" HorizontalAlignment="Left" Height="42" Margin="10,11,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="552" Opacity="0" MouseLeftButtonDown="rectDragBar_MouseLeftButtonDown"/>
+        <TextBox x:Name="txtTitle" HorizontalAlignment="Left" Height="23" Margin="45,94,0,0" VerticalAlignment="Top" Width="240" VerticalScrollBarVisibility="Disabled" MaxLines="1" KeyDown="keyDown" TabIndex="1"/>
+        <TextBox x:Name="txtLocation" HorizontalAlignment="Left" Height="23" Margin="322,94,0,0" VerticalAlignment="Top" Width="252" VerticalScrollBarVisibility="Auto" MaxLines="1" KeyDown="keyDown" TabIndex="2"/>
+        <DatePicker x:Name="datePicker" HorizontalAlignment="Left" Margin="45,159,0,0" VerticalAlignment="Top" Width="240" BorderThickness="0" TabIndex="3"/>
+        <ComboBox x:Name="cmbSubject" HorizontalAlignment="Left" Margin="322,161,0,0" VerticalAlignment="Top" Width="252" SelectedIndex="0" IsSynchronizedWithCurrentItem="False" TabIndex="4">
+            <ComboBoxItem Content="Select Subject..."/>
+            <ComboBoxItem/>
+        </ComboBox>
+        <TextBox x:Name="txtDescription" HorizontalAlignment="Left" Height="97" Margin="45,226,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="529" ToolTip="Description" VerticalScrollBarVisibility="Auto" MaxLines="30" MaxLength="500" KeyDown="keyDown" TabIndex="5"/>
+        <Label x:Name="label" Content="Description:" HorizontalAlignment="Left" Margin="45,200,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Label x:Name="label1" Content="Deadline (If applicable):" HorizontalAlignment="Left" Margin="45,133,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Label x:Name="label2" Content="Location:" HorizontalAlignment="Left" Margin="319,68,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Label x:Name="label3" Content="Title:*" HorizontalAlignment="Left" Margin="45,68,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Label x:Name="label4" Content="Select Subject/Club:" HorizontalAlignment="Left" Margin="322,135,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Ellipse x:Name="circleApply" HorizontalAlignment="Left" Height="53" Margin="278,337,0,0" Stroke="Black" VerticalAlignment="Top" Width="53" StrokeThickness="0" MouseEnter="circleApply_MouseEnter" MouseLeave="circleApply_MouseLeave" MouseLeftButtonDown="circleApply_MouseLeftButtonDown">
+            <Ellipse.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/applyIcon.png"/>
+            </Ellipse.Fill>
+        </Ellipse>
+        <Label x:Name="label3_Copy" Content="*Indicates Required Fields" HorizontalAlignment="Left" Margin="376,33,0,0" VerticalAlignment="Top" Foreground="White"/>
+    </Grid>
+</Window>
+

@@ -1,0 +1,45 @@
+﻿<Window x:Name="windowRemoveAnnouncement" x:Class="Announcement_App_2.removeAnnouncement"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Announcement_App_2"
+        mc:Ignorable="d"
+        Title="removeAnnouncement" Height="570" Width="700" ResizeMode="NoResize" WindowStyle="None" Loaded="Window_Loaded" Foreground="White" OpacityMask="White" AllowsTransparency="True">
+    <Window.Background>
+        <ImageBrush/>
+    </Window.Background>
+    <Grid Margin="0,0,10,0">
+        <Grid.Background>
+            <ImageBrush/>
+        </Grid.Background>
+        <Rectangle x:Name="rectMain" Fill="#FF2E6CA4" Stroke="Black" RadiusX="10" RadiusY="10" Margin="10,11,0,10" HorizontalAlignment="Left" Width="680" MouseLeftButtonDown="rectMain_MouseLeftButtonDown"/>
+        <Rectangle x:Name="rectExit" HorizontalAlignment="Left" Height="42" Margin="648,11,0,0" RadiusY="10" RadiusX="10" Stroke="Black" VerticalAlignment="Top" Width="42" StrokeThickness="0" MouseLeave="rectExit_MouseLeave" MouseLeftButtonDown="rectExit_MouseLeftButtonDown" MouseEnter="rectExit_MouseEnter">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/exitIcon.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Label x:Name="lblTitle" Content="Remove Announcements" HorizontalAlignment="Left" Margin="24,23,0,0" VerticalAlignment="Top" FontFamily="Open Sans" FontSize="28" FontWeight="Bold" Foreground="White" Height="47" Width="360"/>
+        <Rectangle x:Name="rectDragBar" Fill="#FF2286E0" HorizontalAlignment="Left" Height="42" Margin="10,11,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="638" Opacity="0" MouseLeftButtonDown="rectDragBar_MouseLeftButtonDown"/>
+        <DataGrid x:Name="dataGridAnnouncements" HorizontalAlignment="Left" Margin="50,95,-62.5,-62" VerticalAlignment="Top" Height="276" Width="615" GridLinesVisibility="Vertical" IsReadOnly="True" SelectionChanged="dataGridAnnouncements_SelectionChanged" KeyDown="keyDown">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding title}" ClipboardContentBinding="{x:Null}" Header="Title"/>
+                <DataGridTextColumn Binding="{Binding getSubject}" ClipboardContentBinding="{x:Null}" Header="Subject"/>
+                <DataGridTextColumn Binding="{Binding date}" ClipboardContentBinding="{x:Null}" Header="Date Created"/>
+                <DataGridTextColumn Binding="{Binding time}" ClipboardContentBinding="{x:Null}" Header="Time Created"/>
+                <DataGridTextColumn Binding="{Binding teacherName}" ClipboardContentBinding="{x:Null}" Header="Teacher"/>
+                <DataGridTextColumn Binding="{Binding location}" ClipboardContentBinding="{x:Null}" Header="Location"/>
+                <DataGridTextColumn Binding="{Binding deadline}" ClipboardContentBinding="{x:Null}" Header="Deadline"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label x:Name="lblDescription" Content="" HorizontalAlignment="Left" Margin="50,433,0,0" VerticalAlignment="Top" Height="96" Width="615" Background="White"/>
+        <Label x:Name="label" Content="Description:" HorizontalAlignment="Left" Margin="50,407,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold"/>
+        <TextBox x:Name="txtSearch" HorizontalAlignment="Left" Height="23" Margin="519,67,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="146" ToolTip="Search..." Foreground="#FF707070" Text="Search..." GotFocus="txtSearch_GotFocus" LostFocus="txtSearch_LostFocus" TextChanged="txtSearch_TextChanged"/>
+        <Ellipse x:Name="circleRemove" Margin="331,375,306,142" Stroke="Black" StrokeThickness="0" MouseEnter="circleRemove_MouseEnter" MouseLeave="circleRemove_MouseLeave" MouseLeftButtonDown="circleRemove_MouseLeftButtonDown" Height="53">
+            <Ellipse.Fill>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/removeIcon.png"/>
+            </Ellipse.Fill>
+        </Ellipse>
+    </Grid>
+</Window>
+

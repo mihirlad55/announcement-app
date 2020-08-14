@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Announcement Viewer</title>
+    
+    <script src="/view/script.js"></script>
+    <script src="/js/jquery-3.1.1.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script> 
+
+    
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" type="text/css">
+    <link href="/view/styles.css" rel="stylesheet" type="text/css">
+    <link href="/css/animate.css" rel="stylesheet" type="text/css">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+        
+    </head>
+<body onLoad="getAnnouncements();">
+	  <br>
+    <div id="greybackground">
+        <div id="container">
+            <h1 id="websiteHeader">North Park Announcements</h1>
+        </div>
+        <div id="main">
+            <div id="title">
+                <h1>View Anouncements</h1>
+            </div>
+            <br><hr><br><br>
+            
+            <table class="table table-hover" id="tableAnnouncements">
+            	<thead>
+                	<tr>
+                    	<th>Title</th>
+                       	<th>Subject</th>
+                    	<th>Date Created</th>
+                    	<th>Time Created</th>
+                    	<th>Location</th>
+                    	<th>Deadline</th>
+                    </tr>
+                </thead>
+            </table>
+            <div id="test">
+            <p>xstuff</p>
+            </div>
+            <input type="button" onClick="onLoad();">
+            
+        </div>
+    </div>	
+    </body>
+</html>

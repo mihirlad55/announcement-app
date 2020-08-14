@@ -1,0 +1,262 @@
+
+#blueHeader{
+    background-color: rgb(54, 171, 243);
+    margin: 0px;
+    box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.5);
+	padding-bottom: 1%;
+}
+
+#title{
+	font-size: 3em;
+	align-text: left;
+}
+
+#logo {
+	float: left;
+	height: 8em;
+	width: 8em;	
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+.body{
+	background-color: rgba(42,42,42,1.00);
+	padding-bottom: 0px;
+	overflow: hidden;
+}
+
+#main{
+	height: 4000px;
+	padding-top: 50%;
+	min-width: 320px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: rgba(255,255,255,1);
+	padding-bottom: 10%;
+	text-align: center;
+	overflow: scroll;
+}
+
+
+
+#websiteHeader{
+	height: 100%;
+	padding-top: 2%;
+	margin-top: auto;
+	margin-bottom: auto;
+    color: white;
+	font-size: 4em;
+	text-wrap: normal;
+    font-family: "Open Sans", serif;
+}
+
+#containerHeader {
+	width: 100%;
+}
+
+
+h1{
+    font-family: "Roboto", serif;
+    text-align: center;
+}
+
+
+#tableAnnouncements {
+	
+	margin-top: 5%;
+	margin-left: auto;
+	margin-right: auto;
+	width: 95%;
+}
+
+
+.announcementBox {
+	margin-top: 5%;
+	border: 1px solid rgb(54, 171, 243);
+	margin-left: 5%;
+	margin-right: 5%;
+	border-radius: 8px;
+	background-color: rgb(54, 171, 243); 
+	padding: 3%;
+	padding-top: 0.25%;
+}
+
+
+
+.announcementDateTime {
+	float: center;
+	font-family: "Open Sans", serif;
+	color: white;
+	font-size: 1em;
+}
+
+.announcementTitle {
+	font-weight: bold;
+	float: center;
+	font-family: "Open Sans", serif;
+	color: white;
+}
+
+.announcementContent {
+	margin-top: 4%;
+	font-family: "Open Sans", serif;
+	color: white;
+}
+
+.announcementHeader {
+	font-weight: bold;
+	display: inline-flex;
+	font-size: 1em;
+	font-family: "Open Sans", serif;
+	color: white;
+}
+
+.announcementValue {
+	display: inline-flex;
+	margin-left: 0.25%;
+	margin-right: 5%;
+	font-family: "Open Sans", serif;
+	color: white;
+	font-size: 1em;
+	
+}
+
+.lblSubject {
+	margin-left: 6%;	
+}
+
+.announcementDeadline {
+	margin-right: 0;	
+}
+
+.announcementIcon {
+	display: none;
+	margin-top: 5%;
+	margin-bottom: 5%;
+	width: 10%;
+	height: 10%;	
+	float: left;
+}
+
+.mainProperties {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#btnToggleView {
+	float: right;
+	background-image: url(/images/tableview.png);
+	width: 3em;
+	height: 3em;
+	background-size: cover;
+	margin-right: 2%;
+	margin-bottom: -2%;
+}
+
+
+#navbar {
+	display: block;
+}
+
+
+.invisible {
+	position: absolute !important;
+   	top: -9999px !important;
+  	left: -9999px !important;	
+}
+
+
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgba(0,0,0,0.4);
+	-webkit-animation-name: fadeIn;
+	-webkit-animation-duration: 0.4s;
+	animation-name: fadeIn;
+	animation-duration: 0.4s;
+}
+
+
+#modalContent {
+	position: fixed;
+	bottom: 0;
+	background-color: #ffffff;
+	width: 100%;
+	-webkit-animation-name: slideUp;
+	-webkit-animation-duration: 0.4s;
+	animation-name: slideUp;
+	animation-duration: 0.4s;	
+}
+
+#btnModalClose {
+	padding-right: 2%;
+	color: white;
+	float: right;
+	font-size: 1.5em;
+	font-weight: bold;	
+}
+
+#btnModalClose:hover,
+#btnModalClose:focus {
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;	
+}
+
+
+#modalHeader {
+	padding: 1% 1% 1% 1%;
+	background-color: rgb(54, 171, 243);
+	color: white;
+	font-size: 1.5em;
+}
+
+#modalBody { 
+	padding: 0.5% 1% 0.5% 1%;
+	font-size: 1.5em;
+}
+
+#modalFooter {
+	padding: 0.5% 1% 0.5% 1%;
+	background-color: rgb(54, 171, 243);
+	color: white;
+	font-size: 1.5em;
+}
+
+#modalAnnouncementDeadline {
+	float: right;
+	margin-right: 1%;
+}
+
+#modalAnnouncementDateCreated {
+	float: right;	
+	margin-right: 1%;
+}
+
+#modalAnnouncementSubject { font-weight: bold; }
+
+@-webkit-keyframes slideUp {
+	from { bottom: -300px; opacity: 0; }
+	to { bottom: 0px; opacity: 1; }	
+}
+
+@keyframes slideUp {
+	from { bottom: -300px; opacity: 0; }
+	to { bottom: 0px; opacity: 1; }		
+}
+
+@-webkit-keyframes fadeIn {
+	from { opacity: 0 }
+	to { opacity: 1 }
+}
+
+@keyframes fadeIn {
+	from { opacity: 0 }
+	to { opacity: 1 }
+}

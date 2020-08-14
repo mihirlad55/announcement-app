@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Announcement Creator</title>
+    
+    <script src="/create/script.js"></script>
+    <script src="/js/jquery-3.1.1.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+
+    
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" type="text/css">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/create/styles.css" rel="stylesheet" type="text/css">
+    <link href="/css/animate.css" rel="stylesheet">
+</head>
+
+<body onLoad="onLoad();" class="body">
+ 
+ 	<div id="containerHeader">
+        <div id="headerLogo"></div><div id="headerTitle"><span>North Park Announcements</span></div>
+        <nav class="nav" id="navbar">
+        	<ul>
+            	<li><a href="/">Home</a></li>
+            	<li><a href="/create">Create</a></li>
+            	<li><a href="/view">View</a></li>
+            </ul>
+        </nav>
+    </div>
+        <div id="main" class="invisible">
+            <div id="title">
+                <h1>Create An Announcement</h1>
+            </div>
+            
+            <br><br>
+            <hr>
+            
+                <form>
+                    <div class="form-group">
+                        <label for="Announcement Title">Announcement Title</label>
+                        <input class="form-control" id="txtTitle" placeholder="Title" type="email">
+                    </div>
+                    <br>
+                    <hr>
+
+
+                    <div class="form-group">
+                        <label for="Teacher Name">Teacher Name</label>
+                        <input class="form-control" id="txtTeacherName" placeholder="Teacher Name" type="text">
+                    </div>
+                    <br>
+                    <hr>
+
+
+                    <div class="form-group">
+                        <label for="Location">Location</label>
+                        <input class="form-control" id="txtLocation" placeholder="Location" type="text">
+                    </div>
+                    <br>
+                    <hr>
+
+						<div class="form-group">
+                        	<label for="Deadline">Deadline</label>
+                          	<div>
+                                <select class="form-control" id="dropDownMonth" onchange="refreshDays();">
+                                    <option>Month</option>
+                                    <option>January</option>
+                                    <option>February</option>
+                                    <option>March</option>
+                                    <option>April</option>
+                                    <option>May</option>
+                                    <option>June</option>
+                                    <option>July</option>
+                                    <option>August</option>
+                                    <option>September</option>
+                                    <option>October</option>
+                                    <option>November</option>
+                                    <option>December</option>
+                                </select>
+                            
+                                <select class="form-control" id="dropDownYear">
+                                    <option>Year</option>
+                                </select>
+                            
+                                <select class="form-control" id="dropDownDay" disabled>
+                                    <option>Day</option>
+                                </select>
+          
+                            	<br><br><br>
+                            <hr>
+                            
+                      </div>
+                      </div>
+                            
+                    <div id="form-control">
+                    
+                        <label for="Subject">Subject</label>
+                        
+                        <select class="form-control" id="dropDownSubject">
+                            <option>General</option>
+                            <option>School</option>
+                            <option>Basketball</option>
+                            <option>Soccer</option>
+                            <option>Baseball</option>
+                     	</select>
+                        
+                        <br><br>
+                        <hr>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="txtContent">Content</label> 
+
+                        <textarea class="form-control" rows="5" id="txtContent"></textarea>
+                    </div>
+                    <br>
+					<hr>
+
+                    <div class="form-group">
+                        <button class="btn btn-primary" id="btnSave" onclick="saveData();" type="submit">Save Announcement</button>
+                    </div>
+                </form>
+            </div>
+</body>
+</html>
